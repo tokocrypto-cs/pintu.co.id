@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Loading</title>
+  <style>
+    html,body{
+      height:100%;
+      margin:0;
+      background:#000;
+    }
+    .bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.imghippo.com/files/YVVZ4769es.jpg") no-repeat center center;
+  background-size: cover; /* isi penuh layar */
+  z-index: 0;
+    }
+    .overlay {
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.35);
+      z-index:1;
+    }
+    .spinner {
+      width:60px;
+      height:60px;
+      border:6px solid rgba(255,255,255,0.3);
+      border-top-color:#fff;
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform:rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <script>
+    // Ganti "nextpage.html" dengan halaman tujuan
+    setTimeout(function(){
+      window.location.href = "pintu-com.html";
+    }, 3000);
+  </script>
+</body>
+</html>
